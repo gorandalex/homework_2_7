@@ -20,6 +20,8 @@ class Teacher(Base):
     firstname = Column(String(255), nullable=False)
     lastname = Column(String(255), nullable=False) 
     
+    subjects = relationship('Subject', back_populates='teacher')
+    
 class Student(Base):
     __tablename__ = 'students'
     id = Column(Integer, primary_key=True)
@@ -28,3 +30,12 @@ class Student(Base):
     group_id = Column('group_id', ForeignKey(Group.id, ondelete='CASCADE'), nullable=False)
     
     group = relationship(Group, back_populates = 'students')   
+    
+    
+class Subject(Base):
+    __tablename__ = 'subjects'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(255), nullable=False)
+    teacher_id = Column(Integer, ForeignKey(Teacher.id, ondelete='CASCADE'), nullable=False)
+    
+    teacher = relationship(Teacher, back_populates = 'subjects')
