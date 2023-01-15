@@ -9,7 +9,7 @@ NUMBER_STUDENTS = 30
 NUMBER_GROUPS = 3
 NUMBER_SUBJECTS = 8
 NUMBER_TEACHERS = 5
-NUMBER_GRADES = 150
+NUMBER_GRADES = 20
 
 
 file_config = pathlib.Path(__file__).parent.parent.joinpath("config.ini")
