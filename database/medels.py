@@ -11,4 +11,9 @@ class Group(Base):
     __tablename__ = 'groups'
     id = Column(Integer, primary_key=True)
     name = Column(String(100), unique = True, nullable=False)
-    
+
+class Teacher(Base):
+    __tablename__ = 'teachers'
+    id = Column(Integer, primary_key=True)
+    firstname = Column(String(255), nullable=False)
+    lastname = Column(String(255), nullable=False)    
