@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "homework-2-7"
+version = "0.0.1"
+description = "postgres base"
+authors = ["Andrii Gorobets"]
+readme = "README.md"
+packages = [{include = "homework_2_7"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+alembic = "^1.9.2"
+sqlalchemy = "^1.4.46"
+faker = "^16.4.0"
+psycopg2 = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
