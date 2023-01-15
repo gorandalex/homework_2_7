@@ -1,6 +1,6 @@
-from seeds import groups
-from seeds import teachers
+from seeds import groups, teachers, students
 
 if __name__ == '__main__':
     #groups.create_groups()
-    teachers.create_teachers()
+    #teachers.create_teachers()
+    students.create_students()
